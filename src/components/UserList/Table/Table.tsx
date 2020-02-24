@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 import './Table.css';
 import TableRow from "./TableRow/TableRow";
+import Popup from "../../Popup/Popup";
 
 const Table = () => {
+    const [currentIndex, setCurrentIndex ] = useState(-1);
+    const onClick = (index:number) => {
+        setCurrentIndex(index);
+    };
+
+    const closePopup = () => {
+        setCurrentIndex(-1);
+    };
+
 
     const data = [
             { id: 12412412, mail: 'leffler.karelle@marcellus.net', name: 'Lewis', secondName: 'Taylor', type: 'Business', company: 'green', country: 'Korea', subscription: '11/02/2016' },
@@ -20,7 +30,10 @@ const Table = () => {
     const ourClients = data.map((client, index) => {
         return (
             <>
-                <TableRow client={client}  key={index} />
+                <TableRow client={client} onClick={onClick}  index={index} key={index} />
+                {index === currentIndex && (
+                    <Popup onClose={closePopup} clients={client}/>
+                )}
             </>
         )
     });

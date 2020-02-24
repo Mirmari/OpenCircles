@@ -1,16 +1,24 @@
 import React  from "react";
 
 type defaultProps = {
-    client:
-        {
-            id: number, mail:string, name:string,secondName:string, type: string, company: string, country: string, subscription: string
-        }
+    index:number,
+    onClick: (index:number) => void,
+    client: {
+        id: number, mail:string, name:string,secondName:string, type: string, company: string, country: string,
+        subscription: string
+    }
 }
 
 
-const TableRow = ({client}:defaultProps) => {
+const TableRow = ({client,index,onClick}:defaultProps) => {
+    const onCurrentIndex = () => {
+        onClick(index);
+    };
+
     return (
-        <tr>
+        <tr
+            onClick={onCurrentIndex}
+        >
             <td className="primary-text">{client.mail}</td>
             <td className="primary-text">
                 {client.name}
