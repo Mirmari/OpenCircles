@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../Logo/Logo";
 
 import './Navigation.css';
 
@@ -6,6 +7,7 @@ const Navigation = () => {
 
     return (
       <div className="nav">
+          <Logo/>
           <div className="nav__items">
               <div className="nav__group">
                   <div className="burger" />

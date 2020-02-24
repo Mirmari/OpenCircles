@@ -1,0 +1,97 @@
+.side-bar {
+    width: 240px;
+    height: 956px;
+    background-color: #2185a6;
+}
+
+.side-bar__item {
+    display: flex;
+    align-items: center;
+    padding: 28px 0;
+    position: relative;
+}
+
+.item__text {
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.item__icon {}
+
+.side-bar--active {
+    display: block;
+    width: 3px;
+    height: 60px;
+    background-color: #fff;
+    position: absolute;
+    left: 2px;
+    transition: opacity .3ms linear;
+}
+
+.icon--user_list {
+    background: url("../../assets/side_bar/user_list.png");
+    width: 20px;
+    height: 15px;
+    margin-left: 22px;
+    margin-right: 26px;
+}
+
+.icon--daily {
+    background: url("../../assets/side_bar/daily.png");
+    width: 14px;
+    height: 21px;
+    margin-left: 25px;
+    margin-right: 30px;
+}
+
+.icon--brainstorm {
+    background: url("../../assets/side_bar/brainstorm.png");
+    width: 15px;
+    height: 17px;
+    margin-left: 25px;
+    margin-right: 29px;
+}
+
+.icon--course {
+    background: url("../../assets/side_bar/course.png");
+    width: 19px;
+    height: 17px;
+    margin-left: 22px;
+    margin-right: 27px;
+}
+
+.icon--leveling {
+    background: url("../../assets/side_bar/level.png");
+    width: 18px;
+    height: 18px;
+    margin-left: 22px;
+    margin-right: 29px;
+}
+
+.icon--live_streams {
+    background: url("../../assets/side_bar/live_streams.png");
+    width: 17px;
+    height: 19px;
+    margin-left: 21px;
+    margin-right: 31px;
+}
+
+.icon--advanced {
+    background: url("../../assets/side_bar/advanced.png");
+    width: 20px;
+    height: 19px;
+    margin-left: 20px;
+    margin-right: 27px;
+}
+
+.icon--video_analytics {
+    background: url("../../assets/side_bar/analytics.png");
+    width: 19px;
+    height: 19px;
+    margin-left: 21px;
+    margin-right: 27px;
+}
