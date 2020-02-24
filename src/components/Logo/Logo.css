@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    background-color: #4d9db8;
+    padding: 33px 0;
+}
+
+.logo__img {
+    background: no-repeat center/50% url("../../assets/logo/logo.png");
+    width: 35px;
+    height: 35px;
+}
+
+.logo__text {
+    font-size: 18px;
+    color: #fff;
+}
