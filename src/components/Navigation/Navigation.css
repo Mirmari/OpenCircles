@@ -1,0 +1,91 @@
+.nav {
+    display: flex;
+    background-color: #feb31c;
+}
+
+.nav__items {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav__group {
+    display: flex;
+    align-items: center;
+}
+
+.item--users {
+    margin-left: -106px;
+}
+
+.users {
+    color: #242430;
+}
+
+.users__title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.users__subtitle {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.person {
+    font-size: 14px;
+    color: #242430;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: -0.03px;
+}
+
+.arrow {
+    background: url("../../assets/arrow.png");
+    width: 9px;
+    height: 6px;
+    margin-left: 10px;
+}
+
+.burger {
+    background: url("../../assets/nav/burger.png");
+    width: 21px;
+    height: 14px;
+    margin-right: 36px;
+}
+
+.input {
+    min-width: 277px;
+    border-radius: 10px;
+    background: #feca60 url("../../assets/nav/search.png") no-repeat scroll 15px 15px;
+
+    border: none;
+    padding: 15px 12px 13px 42px;
+    font-family: 'Open Sans', sans-serif ;
+    color: #242430;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.input::placeholder {
+    color: #242430;
+}
+
+.button {
+    box-shadow: 0 2px 4px rgba(230, 230, 232, 0.3);
+    border-radius: 4px;
+    border: 1px solid #c59b46;
+    background-color: #ffffff;
+    padding: 11px 6px;
+    margin-right: 15px;
+}
+
+.nav__button__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #feb31c;
+    letter-spacing: -0.03px;
+}
