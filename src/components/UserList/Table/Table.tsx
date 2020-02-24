@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 
-import './Table.css';
 import TableRow from "./TableRow/TableRow";
 import Popup from "../../Popup/Popup";
+import { connect } from "react-redux";
 
-const Table = () => {
+import './Table.css';
+
+type defaultProps = {
+    clients: {
+        id: number, mail:string, name:string,secondName:string, type: string, company: string, country: string, subscription: string
+    }[];
+}
+
+const Table = ({clients}:defaultProps) => {
     const [currentIndex, setCurrentIndex ] = useState(-1);
     const onClick = (index:number) => {
         setCurrentIndex(index);
@@ -14,20 +22,7 @@ const Table = () => {
         setCurrentIndex(-1);
     };
 
-
-    const data = [
-            { id: 12412412, mail: 'leffler.karelle@marcellus.net', name: 'Lewis', secondName: 'Taylor', type: 'Business', company: 'green', country: 'Korea', subscription: '11/02/2016' },
-            { id: 2352212, mail: 'karolann_walker@yahoo.com', name: 'Katherine', secondName: 'Rogers', type: 'Business', company: 'olive', country: 'Rwanda', subscription: '11/02/2016' },
-            { id: 434634123, mail: 'lucile.mcdermott@yahoo.com', name: 'Francisco', secondName: 'Webster',  type: 'Private', company: 'aqua', country: 'Guam', subscription: '11/02/2016' },
-            { id: 2342653, mail: 'elfrieda_sanford@hagenes.co.uk', name: 'Louisa', secondName: 'Griffith',  type: 'Business', company: 'olive', country: 'Uruguay', subscription: '11/02/2016' },
-            { id: 235234, mail: 'daphney.okuneva@gmail.com', name: 'Alan', secondName: 'Ellis',  type: 'Private', company: 'green', country: 'Djibouti', subscription: '11/02/2016' },
-            { id: 23423654, mail: 'ezequiel_rutherford@yahoo.com', name: 'Edward', secondName: 'Jacobs',  type: 'Business', company: 'black', country: 'Jersey', subscription: '11/02/2016' },
-            { id: 536231, mail: 'leffler.karelle@marcellus.net', name: 'Lewis', secondName: 'Taylor',  type: 'Business', company: 'green', country: 'Korea', subscription: '11/02/2016' },
-            { id: 7423423, mail: 'karolann_walker@yahoo.com', name: 'Katherine', secondName: 'Rogers',  type: 'Business', company: 'olive', country: 'Rwanda', subscription: '11/02/2016' },
-            { id: 8234124, mail: 'lucile.mcdermott@yahoo.com', name: 'Francisco', secondName: 'Webster',  type: 'Private', company: 'aqua', country: 'Guam', subscription: '11/02/2016' },
-        ];
-
-    const ourClients = data.map((client, index) => {
+    const ourClients = clients.map((client, index) => {
         return (
             <>
                 <TableRow client={client} onClick={onClick}  index={index} key={index} />
@@ -57,4 +52,8 @@ const Table = () => {
     );
 };
 
-export default Table;
+const mapStateToProps = (state:defaultProps) => ({
+    clients: state.clients
+});
+
+export default connect(mapStateToProps)(Table);

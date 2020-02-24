@@ -11,7 +11,6 @@ const SideBar = () => {
 
     return (
         <div className="side-bar">
-
             <div className="side-bar__item"
                 onClick={onClick}
             >

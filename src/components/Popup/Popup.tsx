@@ -80,7 +80,6 @@ const Popup = ({onClose, clients}:defaultProps) => {
                         <button className="popup_button">revoke access</button>
                         <button className="popup_button button--green" >SAve</button>
                     </div>
-
                 </div>
             </div>
         </div>
